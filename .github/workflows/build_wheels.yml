@@ -34,6 +34,11 @@ jobs:
         with:
           python-version: '3.13'
 
+      - name: Enable QEMU (for aarch64 wheels on x86_64 runner)
+        if: matrix.os == 'ubuntu-24.04'
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64
       - name: Build wheels Linux
         if: matrix.os == 'ubuntu-24.04'
         uses: pypa/cibuildwheel@v3.0.0
