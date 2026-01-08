@@ -240,7 +240,7 @@ class BinanceWebSocketApiApiFutures(object):
         return True
 
     def create_order(self,
-                     activation_price: float = None,
+                     activation_price: Any = None,
                      callback_rate: float = None,
                      close_position: bool = None,
                      good_till_date: int = None,
@@ -249,7 +249,7 @@ class BinanceWebSocketApiApiFutures(object):
                      order_type: Optional[Literal['LIMIT', 'LIMIT_MAKER', 'MARKET', 'STOP_LOSS', 'STOP_LOSS_LIMIT',
                                                   'TAKE_PROFIT', 'TAKE_PROFIT_LIMIT']] = None,
                      position_side: Optional[Literal['BOTH', 'LONG', 'SHORT']] = None,
-                     price: float = 0.0,
+                     price: Any = 0.0,
                      price_match: Optional[Literal['OPPONENT', 'OPPONENT_5', 'OPPONENT_10', 'OPPONENT_20', 'QUEUE',
                                                    'QUEUE_5', 'QUEUE_10, QUEUE_20']] = None,
                      price_protect: bool = None,
@@ -262,7 +262,7 @@ class BinanceWebSocketApiApiFutures(object):
                      self_trade_prevention_mode: Optional[Literal['EXPIRE_TAKER', 'EXPIRE_MAKER',
                                                                   'EXPIRE_BOTH', 'NONE']] = None,
                      side: Optional[Literal['BUY', 'SELL']] = None,
-                     stop_price: float = None,
+                     stop_price: Any = None,
                      stream_id: str = None,
                      stream_label: str = None,
                      symbol: str = None,
