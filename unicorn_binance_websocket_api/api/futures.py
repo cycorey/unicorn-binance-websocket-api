@@ -38,7 +38,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from typing import Optional, Union, Literal
+from typing import Optional, Union, Literal, Any
 import logging
 import threading
 
